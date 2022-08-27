@@ -1,12 +1,19 @@
-def reverseWords(nr):
-        while True:
-            if nr.isdigit():
-                return False
-            else:
-                return nr[::-1]
+def reverseWords():
+    while True:
+        nr = str(input())
 
-pr = reverseWords(nr=str(input()))
+        int_list = [int(i) for i in nr if i.isdigit()]
+        if len(int_list) > 1:
+            print('error, rewrite!')
+        else:
+            reverse = nr[::-1]
+            break
+
+    return reverse
+
+pr = reverseWords()
 print(pr)
+
 
 
 
