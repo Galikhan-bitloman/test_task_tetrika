@@ -13,28 +13,6 @@ print("Index of first element: ", task1(array=str(input())))
 
 
 
-""" ------------ task2 ----------------"""
-
-import requests
-from bs4 import BeautifulSoup as bs
-
-
-r = requests.get("https://ru.wikipedia.org/w/index.php?"
-                 "title=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F"
-                 ":%D0%96%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B5"
-                 "_%D0%BF%D0%BE_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82%D1%83")
-print(r.status_code)
-
-soup = bs(r.text, "html.parser")
-data = soup.find("div", class_='mw-category-group')
-
-
-print(data)
-    # get_title = i.split('=')
-
-    # print(get_title)
-
-
 
 """ ------------ task3 ----------------"""
 
